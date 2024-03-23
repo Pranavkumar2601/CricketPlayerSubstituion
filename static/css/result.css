@@ -1,0 +1,156 @@
+/* body {
+  background-color: #1d2227;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  background-color: #ffffffee;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  color: #f06;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+button {
+  background-color: #f06;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #f80;
+} */
+
+body {
+  background-color: #1d2227;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  background-color: rgb(3, 6, 55);
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  background-color: rgb(60, 7, 83);
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fade-in 1s ease-out;
+}
+
+h1 {
+  color: rgb(114, 4, 85);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.player-info {
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: rgba(246, 240, 240, 0.841);
+}
+
+h2 {
+  color: rgb(114, 4, 85);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.player-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  animation: fade-in 1s ease-out;
+}
+
+.player-item {
+  background-color: rgb(145, 10, 103);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  animation: slide-in 1s ease-out;
+}
+
+.player-item:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.player-item:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+button {
+  background-color: rgb(114, 4, 85);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 2rem;
+}
+
+button:hover {
+  background-color: rgb(60, 7, 83);
+}
+
+.opponent-team {
+  color: rgb(114, 4, 85);
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.player-name {
+  color: rgb(114, 4, 85);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}

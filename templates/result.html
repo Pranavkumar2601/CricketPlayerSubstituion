@@ -1,0 +1,59 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Beyond The Boundary - Prediction Result</title>
+    <link rel="stylesheet" href="../static/css/result.css" />
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediction Result</h1>
+      <p>Player Name: {{ player_name }}</p>
+      <p>Opposition Team: {{ opposition_team }}</p>
+      <h2>Recommended Best Players:</h2>
+      <ul>
+        {% for player in recommended_players %}
+        <li>{{ player }}</li>
+        {% endfor %}
+      </ul>
+      <a href="{{ url_for('index') }}"><button>Go to Home</button></a>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Beyond The Boundary - Prediction Result</title>
+    <link rel="stylesheet" href="../static/css/result.css" />
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Prediction Result</h1>
+      <div class="player-info">
+        <p>Player Name: {{ player_name }}</p>
+        <p>Opposition Team: {{ opposition_team }}</p>
+      </div>
+      <h2>Recommended Best Players:</h2>
+      <ul class="player-list">
+        {% for player in recommended_players %}
+        <li class="player-item">{{ player }}</li>
+        {% endfor %}
+      </ul>
+      <a href="{{ url_for('index') }}"><button>Go to Home</button></a>
+    </div>
+  </body>
+</html>
