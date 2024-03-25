@@ -56,3 +56,41 @@
     </div>
   </body>
 </html>
+<form id="substitution-form">
+  <!-- Form fields for player substitution -->
+  <label for="player_name">Player Name:</label>
+  <select name="player_name" id="player_name">
+    {% for player in player_names %}
+    <option value="{{ player }}">{{ player }}</option>
+    {% endfor %}</select
+  ><br />
+  <label for="opposition_team">Opposition Team:</label>
+  <select name="opposition_team" id="opposition_team">
+    {% for team in opposition_teams %}
+    <option value="{{ team }}">{{ team }}</option>
+    {% endfor %}</select
+  ><br />
+  <button type="submit">Get Recommendations</button>
+</form>
+
+<script>
+  document
+    .getElementById("substitution-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent form submission
+      var formData = new FormData(this);
+      // Send form data using AJAX
+      fetch("/recommend", {
+        method: "POST",
+        body: formData,
+      })
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById("result-container").innerHTML = html;
+          document.getElementById("result-modal").style.display = "block";
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
+    });
+</script>

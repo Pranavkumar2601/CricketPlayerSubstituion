@@ -12,7 +12,7 @@ knn_model = load('model.pkl')
 
 df = pd.read_csv('cricket_data.csv')
 
-# used this to retrive data from the dataset in html form  input suggestion
+# used this to retrive data from the dataset in html form  (input suggestion)
 player_names = df['Player Name'].unique().tolist()
 opposition_teams = df['Opposition Team'].unique().tolist()
 
@@ -24,8 +24,8 @@ def recommend_best_player_knn(player_name, opposition_team):
     player_index = df[(df['Player Name'] == player_name) & (df['Opposition Team'] == opposition_team)].index
     
     if len(player_index) == 0:
-        print("No data found for the specified player name and opposition team combination.")
-        return [None]
+        
+        return []
 
     player_index = player_index[0]  # Select the first index if multiple rows are found
 
@@ -66,3 +66,7 @@ def recommend():
 
 if __name__ == '__main__':
     app.run(debug=True)
+    
+#for ec2 instances
+# if __name__ == '__main__':
+#     app.run(host='0.0.0.0', port=8080)
