@@ -1,3 +1,3 @@
 
-# Cricket Players Susbstituion
- Check ## branch1 for code
+# Cricket Players Substitution
+ Check # branch1 for code
